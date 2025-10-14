@@ -56,7 +56,7 @@
   Connection: close
   
   <!doctype html><title>404 Not found</title><h1>Not found</h1>
-  $ hurl http://localhost:8000/get foo==bar foo==bar User-Agent:hurl/test --print=b
+  $ hurl http://localhost:8000/get foo==bar foo==bar User-Agent:hurl/test -p=b
   {
     "args": {
       "foo": "bar",
@@ -71,7 +71,7 @@
     "origin": "127.0.0.1",
     "url": "http://localhost/get?foo=bar&foo=bar"
   }
-  $ hurl http://localhost:8000/robot.txt --print=b
+  $ hurl http://localhost:8000/robot.txt -p=b
   User-Agent: *
   Disallow: /deny
   $ kill -INT $(cat srv.pid)
